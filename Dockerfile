@@ -1,3 +1,5 @@
-FROM java:8
-RUN javac HelloWorld.java
-CMD ["java", "HelloWorld"]
+FROM openjdk:17
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+RUN javac Hello.java
+CMD ["java", "Hello"]
